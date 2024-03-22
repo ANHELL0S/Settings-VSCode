@@ -1,3 +1,3 @@
 # Settings-VSCode
 
-https://raw.githubusercontent.com/ANHELL0S/Settings-VSCode/master/Screenshot_2024-03-21-20-57-01_1366x768.png
+[![Screenshot-2024-03-21-20-57-01-1366x768.png](https://i.postimg.cc/sDYdtRMd/Screenshot-2024-03-21-20-57-01-1366x768.png)](https://postimg.cc/2VSKZMd2)
