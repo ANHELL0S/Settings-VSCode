@@ -63,9 +63,9 @@
 	"apc.activityBar": {
 		"position": "bottom",
 		"hideSettings": true,
-		"size": 48,
-		"itemMargin": 8,
-		"itemSize": 32
+		"size": 34,
+		"itemMargin": 6,
+		"itemSize": 30
 	},
 
 	"apc.electron": {
@@ -75,13 +75,13 @@
 		"visualEffectState": "active",
 		"titleBarStyle": "hidden",
 		"trafficLightPosition": {
-			"x": 7,
-			"y": 10
+			"x": 0,
+			"y": 0
 		}
 	},
 
 	"apc.header": {
-		"height": 30
+		"height": 28
 	},
 
 	"apc.listRow": {
@@ -90,14 +90,16 @@
 	},
 
 	"apc.stylesheet": {
+		".custom-activitybar div.monaco-workbench div.activitybar > div.content div.monaco-action-bar ul.actions-container li.action-item .badge div.badge-content": "top: 0px; right: 12px; ",
+
 		".monaco-workbench .codicon[class*=codicon-]": "font-size: 14.5px",
-		".sidebar>.title>.title-label": "opacity: 0;flex: 0!important;padding: 0!important;",
-		".sidebar>.title": "padding: 0px 8px!important",
+		".sidebar>.title>.title-label": "opacity: 0; flex: 0 !important; padding: 0 !important;",
+		".sidebar>.title": "padding: 0px 4px !important",
 		".nosidebar .inline-tabs-placeholder": "width: 75px",
 		".pane-header": "padding: 0 8px",
 		".pane-body": "padding: 0px 0px",
 		".split-view-view:first-child .pane-header": "display: none !important;",
-		".monaco-list-row": "border-radius: 0px;",
+		".monaco-list-row": "border-radius: 0px; background: transparent !important;",
 		".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;",
 		".window-appicon": "display: none;",
 		".editor .title": "background: transparent !important;",
@@ -145,7 +147,7 @@
 
 	"workbench.colorCustomizations": {
 		"[Gruvbox Dark Medium]": {
-			"tab.activeBorder": "#eceaea",
+			"tab.activeBorder": "#cdbd9b",
 			"sideBarTitle.foreground": "#282828",
 			//"sideBarSectionHeader.foreground": "#8ec07c",
 			"tree.inactiveIndentGuidesStroke": "#363636",
@@ -159,11 +161,13 @@
 			//"panel.border": "#282828",
 			"statusBar.border": "#3c3836",
 			//"activityBar.border": "#282828",
-			//"activityBar.activeBorder": "#282828",
+			"activityBar.activeBorder": "#282828",
 			"tab.activeForeground": "#eceaea",
 			"tab.inactiveForeground": "#ac9d8e",
 			"editorGroupHeader.tabsBorder": "#282828",
 			//"sideBar.background": "#303030",
+			"scrollbarSlider.background": "#282828",
+			"scrollbarSlider.hoverBackground": "#282828",
 			//"sideBarSectionHeader.foreground": "#4fb1bc",
 
 			"editorBracketHighlight.foreground1": "#ecef5c",
@@ -174,7 +178,10 @@
 			"editorBracketHighlight.foreground6": "#abb2c0",
 			"editorBracketHighlight.unexpectedBracket.foreground": "#db6165",
 
-			"panelTitle.activeBorder": "#eceaea"
+			"panelTitle.activeBorder": "#eceaea",
+
+			"titleBar.activeBackground": "#97c26c",
+			"icon.foreground": "#cdbd9b"
 		}
 	},
 
@@ -273,9 +280,9 @@
 	"workbench.layoutControl.enabled": false,
 	"extensions.autoUpdate": false,
 	"breadcrumbs.enabled": false,
-	"gruvbox-material-icons.hidesExplorerArrows": false,
-	"gruvbox-material-icons.activeIconPack": "angular_ngrx",
-	"gruvbox-material-icons.saturation": 1,
+	"gruvbox-material-icons.hidesExplorerArrows": true,
+	"gruvbox-material-icons.activeIconPack": "react_redux",
+	"gruvbox-material-icons.saturation": 0.8,
 	"terminal.external.linuxExec": "bash",
 	"workbench.productIconTheme": "fluent-icons-fork",
 	"workbench.activityBar.location": "side",
@@ -285,5 +292,6 @@
 	"apc.imports": [
 		"file:///home/angelo/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.1/dist/updateHandler.js"
 	],
-	"workbench.sideBar.location": "right"
+	"workbench.sideBar.location": "right",
+	"gruvbox-material-icons.opacity": 1
 }
