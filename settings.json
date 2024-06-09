@@ -13,7 +13,7 @@
 	"editor.tabSize": 4,
 	"editor.scrollbar.verticalScrollbarSize": 9,
 	"editor.scrollbar.horizontalScrollbarSize": 9,
-	"editor.formatOnPaste": true,
+	//"editor.formatOnPaste": true,
 	"editor.formatOnType": true,
 	"editor.mouseWheelZoom": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -32,8 +32,8 @@
 	"editor.hideCursorInOverviewRuler": true,
 	"workbench.tree.indent": 10,
 	"editor.minimap.enabled": false,
-	"terminal.integrated.fontSize": 13,
-	"terminal.integrated.defaultProfile.linux": "bash (2)",
+	"terminal.integrated.fontSize": 12,
+	"terminal.integrated.defaultProfile.linux": "bash",
 	"editor.cursorWidth": 3,
 	"editor.glyphMargin": false,
 	"terminal.integrated.cursorBlinking": true,
@@ -43,6 +43,7 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 
+	"workbench.tree.enableStickyScroll": false,
 	"workbench.tree.renderIndentGuides": "always",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"workbench.editor.enablePreview": false,
@@ -99,7 +100,7 @@
 		".pane-header": "padding: 0 8px",
 		".pane-body": "padding: 0px 0px",
 		".split-view-view:first-child .pane-header": "display: none !important;",
-		".monaco-list-row": "border-radius: 0px; background: transparent !important;",
+		".monaco-list-row": "border-radius: 0px;",
 		".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;",
 		".window-appicon": "display: none;",
 		".editor .title": "background: transparent !important;",
@@ -111,11 +112,11 @@
 		".inline-no-tabs-placeholder": "background: transparent !important;"
 	},
 
-	"prettier.trailingComma": "all",
-
 	"git.suggestSmartCommit": false,
 	"php.validate.executablePath": "/opt/lampp/bin/php",
 	"html.format.enable": true,
+
+	"editor.formatOnPaste": false,
 	"prettier.arrowParens": "avoid",
 	"prettier.htmlWhitespaceSensitivity": "css",
 	"prettier.insertPragma": false,
@@ -127,22 +128,32 @@
 	"prettier.semi": false,
 	"prettier.singleQuote": true,
 	"prettier.tabWidth": 2,
+	"prettier.trailingComma": "all",
 	"prettier.trailingComma": "es5",
 	"prettier.useTabs": true,
 	"prettier.bracketSameLine": true,
+
 	"explorer.compactFolders": false,
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,
 	"explorer.fileNesting.patterns": {
-		"*.ts": "${capture}.js",
+		// JavaScript y TypeScript
 		"*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
 		"*.jsx": "${capture}.js",
+		"*.ts": "${capture}.js",
 		"*.tsx": "${capture}.ts",
+
+		// Archivos JSON de configuración
 		"tsconfig.*": "tsconfig.*.json",
-		"package.*": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, yarn*, package-lock*, bun.lockb*",
-		"tailwind.config.*": "tailwind.config*, postcss.config*",
+		"package.json": "prettier*, tsconfig*, pnpm-lock*, yarn*, package-lock*, bun.lockb*",
+		"composer.json": "composer.*",
+		"vite.config.js": "tailwind.*, postcss.*, .eslint.*, .eslintrc.*",
+
+		// Dotfiles y archivos de entorno
 		".env": ".env*",
-		"composer.json": "composer.*"
+
+		// Dotfiles y archivos de entorno
+		".gitignore": ".pre*"
 	},
 
 	"workbench.colorCustomizations": {
@@ -151,7 +162,7 @@
 			"sideBarTitle.foreground": "#282828",
 			//"sideBarSectionHeader.foreground": "#8ec07c",
 			"tree.inactiveIndentGuidesStroke": "#363636",
-			"sideBar.foreground": "#c7baa0",
+			"sideBar.foreground": "#cdbd9b",
 			"tab.activeBorderTop": "#282828",
 			"tab.activeBackground": "#282828",
 			"terminal.tab.activeBorder": "#8ec07c",
@@ -168,6 +179,44 @@
 			//"sideBar.background": "#303030",
 			"scrollbarSlider.background": "#282828",
 			"scrollbarSlider.hoverBackground": "#282828",
+			//"sideBarSectionHeader.foreground": "#4fb1bc",
+
+			"editorBracketHighlight.foreground1": "#ecef5c",
+			"editorBracketHighlight.foreground2": "#dfb976",
+			"editorBracketHighlight.foreground3": "#c172d9",
+			"editorBracketHighlight.foreground4": "#4fb1bc",
+			"editorBracketHighlight.foreground5": "#97c26c",
+			"editorBracketHighlight.foreground6": "#abb2c0",
+			"editorBracketHighlight.unexpectedBracket.foreground": "#db6165",
+
+			"panelTitle.activeBorder": "#eceaea",
+
+			"titleBar.activeBackground": "#97c26c",
+			"icon.foreground": "#cdbd9b"
+		},
+		"[Gruvbox Dark Hard]": {
+			"tab.activeBorder": "#cdbd9b",
+			"editorGroupHeader.border": "#1d2021",
+			"sideBarTitle.foreground": "#282828",
+			//"sideBarSectionHeader.foreground": "#8ec07c",
+			"tree.inactiveIndentGuidesStroke": "#363636",
+			"sideBar.foreground": "#cdbd9b",
+			"tab.activeBorderTop": "#282828",
+			"tab.activeBackground": "#1d2021",
+			"terminal.tab.activeBorder": "#8ec07c",
+			"terminalCommandDecoration.defaultBackground": "#abb2c0",
+			"terminalCommandDecoration.successBackground": "#4fb1bc",
+			//"sideBar.border": "#282828",
+			//"panel.border": "#ddd",
+			"statusBar.border": "#3c3836",
+			//"activityBar.border": "#282828",
+			"activityBar.activeBorder": "#282828",
+			"tab.activeForeground": "#eceaea",
+			"tab.inactiveForeground": "#ac9d8e",
+			"editorGroupHeader.tabsBorder": "#282828",
+			//"sideBar.background": "#303030",
+			"scrollbarSlider.background": "#1d2021",
+			"scrollbarSlider.hoverBackground": "#1d2021",
 			//"sideBarSectionHeader.foreground": "#4fb1bc",
 
 			"editorBracketHighlight.foreground1": "#ecef5c",
@@ -279,19 +328,21 @@
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": false,
 	"extensions.autoUpdate": false,
-	"breadcrumbs.enabled": false,
 	"gruvbox-material-icons.hidesExplorerArrows": true,
 	"gruvbox-material-icons.activeIconPack": "react_redux",
 	"gruvbox-material-icons.saturation": 0.8,
 	"terminal.external.linuxExec": "bash",
-	"workbench.productIconTheme": "fluent-icons-fork",
-	"workbench.activityBar.location": "side",
-	"workbench.statusBar.visible": false,
+	"workbench.productIconTheme": "fluent-icons",
 	"animations.Install-Method": "Apc Customize UI++",
 	"animations.Enabled": true,
 	"apc.imports": [
 		"file:///home/angelo/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.1/dist/updateHandler.js"
 	],
+	"gruvbox-material-icons.opacity": 1,
+	"workbench.statusBar.visible": false,
+	"todomd.defaultFile": "/home/angelo/Desktop/SPC-ueb/TODO.txt",
+	"breadcrumbs.enabled": false,
 	"workbench.sideBar.location": "right",
-	"gruvbox-material-icons.opacity": 1
+	"workbench.activityBar.location": "bottom",
+	"editor.stickyScroll.enabled": false
 }
