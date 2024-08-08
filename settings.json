@@ -153,7 +153,10 @@
 		".env": ".env*",
 
 		// Dotfiles y archivos de entorno
-		".gitignore": ".pre*"
+		".gitignore": ".pre*",
+
+		// Archivos relacionados con Docker
+		"Dockerfile": "docker-compose.yml, .dockerignore, Dockerfile*"
 	},
 
 	"workbench.colorCustomizations": {
@@ -340,9 +343,13 @@
 	],
 	"gruvbox-material-icons.opacity": 1,
 	"workbench.statusBar.visible": false,
-	"todomd.defaultFile": "/home/angelo/Desktop/SPC-ueb/TODO.txt",
+	"workbench.activityBar.location": "bottom",
+	"editor.stickyScroll.enabled": false,
 	"breadcrumbs.enabled": false,
 	"workbench.sideBar.location": "right",
-	"workbench.activityBar.location": "bottom",
-	"editor.stickyScroll.enabled": false
+
+	"vscode_custom_css.imports": [
+		"file:///home/angelo/Documents/custom-vscode.css",
+		"file:///home/angelo/Documents/vscode-script.js"
+	]
 }
