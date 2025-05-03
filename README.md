@@ -1,6 +1,6 @@
 # Settings-VSCode
 
-[![Screenshot-2024-03-21-20-57-01-1366x768.png](https://i.postimg.cc/sDYdtRMd/Screenshot-2024-03-21-20-57-01-1366x768.png)](https://postimg.cc/2VSKZMd2)
+[![Screenshot-2025-05-03-09-26-08-1366x768.png](https://i.postimg.cc/KckBQg7m/Screenshot-2025-05-03-09-26-08-1366x768.png)](https://postimg.cc/fksVRygP)
 
 # Extensions visuals
 
