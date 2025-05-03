@@ -1,5 +1,4 @@
 {
-	"tabnine.experimentalAutoImports": true,
 	"telemetry.telemetryLevel": "off",
 	"terminal.integrated.gpuAcceleration": "on",
 
@@ -20,6 +19,7 @@
 	"editor.renderLineHighlight": "none",
 	"editor.bracketPairColorization.enabled": true,
 	"editor.renderControlCharacters": false,
+	"editor.lineHeight": 2,
 	"editor.scrollbar.horizontal": "hidden",
 	"editor.scrollbar.vertical": "hidden",
 	//"window.menuBarVisibility": "toggle",
@@ -31,7 +31,6 @@
 	"editor.linkedEditing": true,
 	"editor.hideCursorInOverviewRuler": true,
 	"workbench.tree.indent": 10,
-	"editor.minimap.enabled": false,
 	"terminal.integrated.fontSize": 12,
 	"terminal.integrated.defaultProfile.linux": "bash",
 	"editor.cursorWidth": 3,
@@ -65,16 +64,16 @@
 		"position": "bottom",
 		"hideSettings": true,
 		"size": 34,
-		"itemMargin": 6,
+		"itemMargin": 0,
 		"itemSize": 30
 	},
 
 	"apc.electron": {
 		"backgroundColor": "rgba(255, 255, 255, .1)",
-		"vibrancy": "sidebar",
+		"vibrancy": "appearance-based",
 		"transparent": true,
-		"visualEffectState": "active",
-		"titleBarStyle": "hidden",
+		"visualEffectState": "inactive",
+		"titleBarStyle": "hiddenInset",
 		"trafficLightPosition": {
 			"x": 0,
 			"y": 0
@@ -82,7 +81,7 @@
 	},
 
 	"apc.header": {
-		"height": 28
+		"height": 30
 	},
 
 	"apc.listRow": {
@@ -93,7 +92,7 @@
 	"apc.stylesheet": {
 		".custom-activitybar div.monaco-workbench div.activitybar > div.content div.monaco-action-bar ul.actions-container li.action-item .badge div.badge-content": "top: 0px; right: 12px; ",
 
-		".monaco-workbench .codicon[class*=codicon-]": "font-size: 14.5px",
+		".monaco-workbench .codicon[class*=codicon-]": "font-size: 15px",
 		".sidebar>.title>.title-label": "opacity: 0; flex: 0 !important; padding: 0 !important;",
 		".sidebar>.title": "padding: 0px 4px !important",
 		".nosidebar .inline-tabs-placeholder": "width: 75px",
@@ -109,7 +108,14 @@
 		".editor .scrollbar:hover .slider": "visibility: initial",
 		".monaco-editor .scroll-decoration": "visibility: hidden",
 		".monaco-scrollable-element>.shadow.top": "visibility: hidden",
-		".inline-no-tabs-placeholder": "background: transparent !important;"
+		".inline-no-tabs-placeholder": "background: transparent !important;",
+		// Don't indent the sidebar title.
+		".custom-sidebar-titlebar .sidebar .composite.title": "padding-left: 0;",
+		// Don't indent the statusbar items.
+		".monaco-workbench .part.statusbar>.items-container>.statusbar-item.left.first-visible-item": "padding-left: 0;",
+		// Show the host button, and make it as wide as the .activitybar.
+		".statusbar #status\\.host": "display: block !important; width: calc(var(--activity-bar-action-size) - 1px); background: #555 !important;",
+		".statusbar #status\\.host .codicon": "margin: 0 auto;"
 	},
 
 	"git.suggestSmartCommit": false,
@@ -117,6 +123,7 @@
 	"html.format.enable": true,
 
 	"editor.formatOnPaste": false,
+
 	"prettier.arrowParens": "avoid",
 	"prettier.htmlWhitespaceSensitivity": "css",
 	"prettier.insertPragma": false,
@@ -128,7 +135,6 @@
 	"prettier.semi": false,
 	"prettier.singleQuote": true,
 	"prettier.tabWidth": 2,
-	"prettier.trailingComma": "all",
 	"prettier.trailingComma": "es5",
 	"prettier.useTabs": true,
 	"prettier.bracketSameLine": true,
@@ -153,7 +159,7 @@
 		".env": ".env*",
 
 		// Dotfiles y archivos de entorno
-		".gitignore": ".pre*",
+		".gitignore": ".*ignore",
 
 		// Archivos relacionados con Docker
 		"Dockerfile": "docker-compose.yml, .dockerignore, Dockerfile*"
@@ -194,7 +200,7 @@
 
 			"panelTitle.activeBorder": "#eceaea",
 
-			"titleBar.activeBackground": "#97c26c",
+			"titleBar.activeBackground": "#282828",
 			"icon.foreground": "#cdbd9b"
 		},
 		"[Gruvbox Dark Hard]": {
@@ -241,11 +247,6 @@
 	"security.workspace.trust.untrustedFiles": "open",
 	"workbench.startupEditor": "none",
 
-	"[php]": {
-		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
-		"editor.tabSize": 2
-	},
-
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features",
 		"editor.tabSize": 2
@@ -259,8 +260,8 @@
 		"editor.tabSize": 2
 	},
 	"[python]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.tabSize": 2
+		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.formatOnSave": true
 	},
 
 	"html.format.contentUnformatted": "pre,code,textarea",
@@ -284,7 +285,7 @@
 
 	"scm.diffDecorations": "none",
 	"extensions.ignoreRecommendations": true,
-	"workbench.colorTheme": "Gruvbox Dark Medium",
+	"workbench.colorTheme": "Gruvbox Dark Hard",
 	"[dart]": {
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
@@ -295,6 +296,7 @@
 	},
 
 	"workbench.iconTheme": "gruvbox-material-icons",
+
 	"editor.formatOnSave": true,
 
 	"terminal.integrated.profiles.linux": {
@@ -327,29 +329,33 @@
 		"textMateRules": []
 	},
 
-	"dotenv.enableAutocloaking": false,
-	"window.commandCenter": false,
-	"workbench.layoutControl.enabled": false,
 	"extensions.autoUpdate": false,
 	"gruvbox-material-icons.hidesExplorerArrows": true,
-	"gruvbox-material-icons.activeIconPack": "react_redux",
-	"gruvbox-material-icons.saturation": 0.8,
+	"gruvbox-material-icons.activeIconPack": "nest",
+	"gruvbox-material-icons.saturation": 1,
+	"gruvbox-material-icons.opacity": 1,
+	"gruvbox-material-icons.folders.theme": "specific",
+
 	"terminal.external.linuxExec": "bash",
 	"workbench.productIconTheme": "fluent-icons",
-	"animations.Install-Method": "Apc Customize UI++",
-	"animations.Enabled": true,
-	"apc.imports": [
-		"file:///home/angelo/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.1/dist/updateHandler.js"
-	],
-	"gruvbox-material-icons.opacity": 1,
-	"workbench.statusBar.visible": false,
+
 	"workbench.activityBar.location": "bottom",
 	"editor.stickyScroll.enabled": false,
-	"breadcrumbs.enabled": false,
+	"workbench.editorAssociations": {
+		"*.sql": "sql-query-book"
+	},
 	"workbench.sideBar.location": "right",
-
-	"vscode_custom_css.imports": [
-		"file:///home/angelo/Documents/custom-vscode.css",
-		"file:///home/angelo/Documents/vscode-script.js"
-	]
+	"editor.minimap.enabled": false,
+	"workbench.editor.wrapTabs": true,
+	"rapidapi.terminalLink.enabled": false,
+	"[xml]": {
+		"editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
+	},
+	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list", "variants"],
+	"workbench.experimental.share.enabled": true,
+	"window.customTitleBarVisibility": "never",
+	"console-ninja.featureSet": "Community",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"breadcrumbs.enabled": false,
+	"workbench.statusBar.visible": false
 }
