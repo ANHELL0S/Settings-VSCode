@@ -1,6 +1,6 @@
 {
 	"telemetry.telemetryLevel": "off",
-	"terminal.integrated.gpuAcceleration": "on",
+	"terminal.integrated.gpuAcceleration": "off",
 
 	"editor.renderWhitespace": "none",
 	"editor.fontFamily": "JetBrains Mono",
@@ -12,16 +12,16 @@
 	"editor.tabSize": 4,
 	"editor.scrollbar.verticalScrollbarSize": 9,
 	"editor.scrollbar.horizontalScrollbarSize": 9,
-	//"editor.formatOnPaste": true,
+	"editor.formatOnPaste": true,
 	"editor.formatOnType": true,
 	"editor.mouseWheelZoom": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.renderLineHighlight": "none",
 	"editor.bracketPairColorization.enabled": true,
 	"editor.renderControlCharacters": false,
-	"editor.lineHeight": 2,
-	"editor.scrollbar.horizontal": "hidden",
-	"editor.scrollbar.vertical": "hidden",
+	"editor.lineHeight": 2.2,
+	//"editor.scrollbar.horizontal": "hidden",
+	//"editor.scrollbar.vertical": "hidden",
 	//"window.menuBarVisibility": "toggle",
 	"grunt.autoDetect": "on",
 	"editor.overviewRulerBorder": false,
@@ -49,7 +49,7 @@
 	"editor.matchBrackets": "never",
 	"editor.guides.bracketPairs": "active",
 	"terminal.integrated.env.linux": {},
-	"editor.hover.enabled": false, // aumente
+	"editor.hover.enabled": true,
 
 	"window.titleBarStyle": "native",
 	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -67,7 +67,6 @@
 		"itemMargin": 0,
 		"itemSize": 30
 	},
-
 	"apc.electron": {
 		"backgroundColor": "rgba(255, 255, 255, .1)",
 		"vibrancy": "appearance-based",
@@ -79,16 +78,13 @@
 			"y": 0
 		}
 	},
-
 	"apc.header": {
 		"height": 30
 	},
-
 	"apc.listRow": {
 		"height": 22,
 		"fontSize": 13
 	},
-
 	"apc.stylesheet": {
 		".custom-activitybar div.monaco-workbench div.activitybar > div.content div.monaco-action-bar ul.actions-container li.action-item .badge div.badge-content": "top: 0px; right: 12px; ",
 
@@ -118,11 +114,9 @@
 		".statusbar #status\\.host .codicon": "margin: 0 auto;"
 	},
 
-	"git.suggestSmartCommit": false,
+	"git.suggestSmartCommit": true,
 	"php.validate.executablePath": "/opt/lampp/bin/php",
 	"html.format.enable": true,
-
-	"editor.formatOnPaste": false,
 
 	"prettier.arrowParens": "avoid",
 	"prettier.htmlWhitespaceSensitivity": "css",
@@ -224,8 +218,8 @@
 			"tab.inactiveForeground": "#ac9d8e",
 			"editorGroupHeader.tabsBorder": "#282828",
 			//"sideBar.background": "#303030",
-			"scrollbarSlider.background": "#1d2021",
-			"scrollbarSlider.hoverBackground": "#1d2021",
+			"scrollbarSlider.background": "#2c2c2b",
+			"scrollbarSlider.hoverBackground": "#2c2c2b",
 			//"sideBarSectionHeader.foreground": "#4fb1bc",
 
 			"editorBracketHighlight.foreground1": "#ecef5c",
@@ -353,9 +347,15 @@
 	},
 	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list", "variants"],
 	"workbench.experimental.share.enabled": true,
-	"window.customTitleBarVisibility": "never",
 	"console-ninja.featureSet": "Community",
 	"liveServer.settings.donotShowInfoMsg": true,
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"editor.inlineSuggest.edits.showCollapsed": true,
+	"refactai.addressURL": "Refact",
+	"refactai.apiKey": "LzJygGzrwS8YW4u0p9rdTOUT",
 	"breadcrumbs.enabled": false,
-	"workbench.statusBar.visible": false
+	"workbench.statusBar.visible": false,
+	"window.customTitleBarVisibility": "never",
+	"gitlens.ai.model": "gitkraken",
+	"gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash"
 }
