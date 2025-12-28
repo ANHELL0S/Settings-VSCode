@@ -20,8 +20,8 @@
 	"editor.bracketPairColorization.enabled": true,
 	"editor.renderControlCharacters": false,
 	"editor.lineHeight": 2.2,
-	//"editor.scrollbar.horizontal": "hidden",
-	//"editor.scrollbar.vertical": "hidden",
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
 	//"window.menuBarVisibility": "toggle",
 	"grunt.autoDetect": "on",
 	"editor.overviewRulerBorder": false,
@@ -57,62 +57,6 @@
 	"explorer.confirmDragAndDrop": false,
 
 	"update.showReleaseNotes": false,
-
-	/* ================== APC ================== */
-
-	"apc.activityBar": {
-		"position": "bottom",
-		"hideSettings": true,
-		"size": 34,
-		"itemMargin": 0,
-		"itemSize": 30
-	},
-	"apc.electron": {
-		"backgroundColor": "rgba(255, 255, 255, .1)",
-		"vibrancy": "appearance-based",
-		"transparent": true,
-		"visualEffectState": "inactive",
-		"titleBarStyle": "hiddenInset",
-		"trafficLightPosition": {
-			"x": 0,
-			"y": 0
-		}
-	},
-	"apc.header": {
-		"height": 30
-	},
-	"apc.listRow": {
-		"height": 22,
-		"fontSize": 13
-	},
-	"apc.stylesheet": {
-		".custom-activitybar div.monaco-workbench div.activitybar > div.content div.monaco-action-bar ul.actions-container li.action-item .badge div.badge-content": "top: 0px; right: 12px; ",
-
-		".monaco-workbench .codicon[class*=codicon-]": "font-size: 15px",
-		".sidebar>.title>.title-label": "opacity: 0; flex: 0 !important; padding: 0 !important;",
-		".sidebar>.title": "padding: 0px 4px !important",
-		".nosidebar .inline-tabs-placeholder": "width: 75px",
-		".pane-header": "padding: 0 8px",
-		".pane-body": "padding: 0px 0px",
-		".split-view-view:first-child .pane-header": "display: none !important;",
-		".monaco-list-row": "border-radius: 0px;",
-		".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;",
-		".window-appicon": "display: none;",
-		".editor .title": "background: transparent !important;",
-		".editor .title .label-container": "visibility: hidden;",
-		".editor .scrollbar .slider": "visibility: hidden",
-		".editor .scrollbar:hover .slider": "visibility: initial",
-		".monaco-editor .scroll-decoration": "visibility: hidden",
-		".monaco-scrollable-element>.shadow.top": "visibility: hidden",
-		".inline-no-tabs-placeholder": "background: transparent !important;",
-		// Don't indent the sidebar title.
-		".custom-sidebar-titlebar .sidebar .composite.title": "padding-left: 0;",
-		// Don't indent the statusbar items.
-		".monaco-workbench .part.statusbar>.items-container>.statusbar-item.left.first-visible-item": "padding-left: 0;",
-		// Show the host button, and make it as wide as the .activitybar.
-		".statusbar #status\\.host": "display: block !important; width: calc(var(--activity-bar-action-size) - 1px); background: #555 !important;",
-		".statusbar #status\\.host .codicon": "margin: 0 auto;"
-	},
 
 	"git.suggestSmartCommit": true,
 	"php.validate.executablePath": "/opt/lampp/bin/php",
@@ -214,6 +158,7 @@
 			"statusBar.border": "#3c3836",
 			//"activityBar.border": "#282828",
 			"activityBar.activeBorder": "#282828",
+
 			"tab.activeForeground": "#eceaea",
 			"tab.inactiveForeground": "#ac9d8e",
 			"editorGroupHeader.tabsBorder": "#282828",
@@ -265,6 +210,7 @@
 	"emmet.triggerExpansionOnTab": true,
 	"emmet.showExpandedAbbreviation": "always",
 	"files.associations": {
+		"*.dbclient-js": "javascript",
 		"*html": "html",
 		"*css": "css",
 		".env*": "dotenv"
@@ -315,11 +261,32 @@
 	},
 
 	"window.menuBarVisibility": "toggle",
+	"window.zoomLevel": -0.3,
 	"[php]": {
 		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
 	},
 
 	"editor.tokenColorCustomizations": {
+		"[*Light*]": {
+			"textMateRules": [
+				{
+					"scope": "ref.matchtext",
+					"settings": {
+						"foreground": "#000"
+					}
+				}
+			]
+		},
+		"[*Dark*]": {
+			"textMateRules": [
+				{
+					"scope": "ref.matchtext",
+					"settings": {
+						"foreground": "#fff"
+					}
+				}
+			]
+		},
 		"textMateRules": []
 	},
 
@@ -353,9 +320,61 @@
 	"editor.inlineSuggest.edits.showCollapsed": true,
 	"refactai.addressURL": "Refact",
 	"refactai.apiKey": "LzJygGzrwS8YW4u0p9rdTOUT",
-	"breadcrumbs.enabled": false,
 	"workbench.statusBar.visible": false,
-	"window.customTitleBarVisibility": "never",
 	"gitlens.ai.model": "gitkraken",
-	"gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash"
+	"gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+	"window.customTitleBarVisibility": "never",
+	"vscode_custom_css.imports": [
+		"file:///home/anhello/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+	],
+	"animations.Enabled": true,
+	"database-client.autoSync": true,
+	"dotenv.enableAutocloaking": false,
+
+	"eslint.enable": true,
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"eslint.workingDirectories": [{ "mode": "auto" }],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"terminal.integrated.suggest.enabled": true,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false,
+		"sql": false
+	},
+	"dbcode.connections": [
+		{
+			"connectionId": "82-ZDDrg_Jb6JAG5Y41BZ",
+			"name": "TST",
+			"driver": "redis",
+			"color": "#F00019",
+			"connectionType": "host",
+			"host": "localhost",
+			"port": 6379,
+			"ssl": false,
+			"username": "default",
+			"password": "",
+			"savePassword": "secretStorage",
+			"readOnly": false,
+			"connectionTimeout": 30
+		},
+		{
+			"connectionId": "014ECSJlZXlVaedTsyugf",
+			"name": "test",
+			"driver": "postgres",
+			"connectionType": "host",
+			"host": "127.0.0.1",
+			"port": 5434,
+			"ssl": false,
+			"username": "root",
+			"password": "",
+			"savePassword": "secretStorage",
+			"readOnly": false,
+			"connectionTimeout": 30
+		}
+	],
+	"breadcrumbs.enabled": false
 }
