@@ -39,7 +39,7 @@
 	"terminal.integrated.cursorStyle": "line",
 	"terminal.integrated.cursorWidth": 3,
 	"[javascriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
 
 	"workbench.tree.enableStickyScroll": false,
@@ -49,7 +49,7 @@
 	"editor.matchBrackets": "never",
 	"editor.guides.bracketPairs": "active",
 	"terminal.integrated.env.linux": {},
-	"editor.hover.enabled": true,
+	"editor.hover.enabled": "on",
 
 	"window.titleBarStyle": "native",
 	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -100,7 +100,7 @@
 		".gitignore": ".*ignore",
 
 		// Archivos relacionados con Docker
-		"Dockerfile": "docker-compose.yml, .dockerignore, Dockerfile*"
+		"Dockerfile": "docker-compose.yml, .dockerignore, Dockerfile*",
 	},
 
 	"workbench.colorCustomizations": {
@@ -139,7 +139,7 @@
 			"panelTitle.activeBorder": "#eceaea",
 
 			"titleBar.activeBackground": "#282828",
-			"icon.foreground": "#cdbd9b"
+			"icon.foreground": "#cdbd9b",
 		},
 		"[Gruvbox Dark Hard]": {
 			"tab.activeBorder": "#cdbd9b",
@@ -178,8 +178,8 @@
 			"panelTitle.activeBorder": "#eceaea",
 
 			"titleBar.activeBackground": "#97c26c",
-			"icon.foreground": "#cdbd9b"
-		}
+			"icon.foreground": "#cdbd9b",
+		},
 	},
 
 	//"explorer.confirmDelete": false,
@@ -188,19 +188,19 @@
 
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features",
-		"editor.tabSize": 2
+		"editor.tabSize": 2,
 	},
 	"[css]": {
 		"editor.defaultFormatter": "vscode.css-language-features",
-		"editor.tabSize": 2
+		"editor.tabSize": 2,
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.tabSize": 2
+		"editor.tabSize": 2,
 	},
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.black-formatter",
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
 	},
 
 	"html.format.contentUnformatted": "pre,code,textarea",
@@ -213,14 +213,14 @@
 		"*.dbclient-js": "javascript",
 		"*html": "html",
 		"*css": "css",
-		".env*": "dotenv"
+		".env*": "dotenv",
 	},
 
 	"emmet.includeLanguages": {
 		"javascript": "javascriptreact",
 		"razor": "html",
 		"plaintext": "pug",
-		"css": ""
+		"css": "",
 	},
 
 	"scm.diffDecorations": "none",
@@ -232,7 +232,7 @@
 		"editor.selectionHighlight": false,
 		"editor.suggestSelection": "first",
 		"editor.tabCompletion": "on",
-		"editor.wordBasedSuggestions": "matchingDocuments"
+		"editor.wordBasedSuggestions": "matchingDocuments",
 	},
 
 	"workbench.iconTheme": "gruvbox-material-icons",
@@ -242,28 +242,28 @@
 	"terminal.integrated.profiles.linux": {
 		"bash": {
 			"path": "bash",
-			"icon": "terminal-bash"
+			"icon": "terminal-bash",
 		},
 		"zsh": {
-			"path": "zsh"
+			"path": "zsh",
 		},
 		"fish": {
-			"path": "fish"
+			"path": "fish",
 		},
 		"tmux": {
 			"path": "tmux",
-			"icon": "terminal-tmux"
+			"icon": "terminal-tmux",
 		},
 		"pwsh": {
 			"path": "pwsh",
-			"icon": "terminal-powershell"
-		}
+			"icon": "terminal-powershell",
+		},
 	},
 
 	"window.menuBarVisibility": "toggle",
-	"window.zoomLevel": -0.3,
+	"window.zoomLevel": 0.4,
 	"[php]": {
-		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
 	},
 
 	"editor.tokenColorCustomizations": {
@@ -272,22 +272,22 @@
 				{
 					"scope": "ref.matchtext",
 					"settings": {
-						"foreground": "#000"
-					}
-				}
-			]
+						"foreground": "#000",
+					},
+				},
+			],
 		},
 		"[*Dark*]": {
 			"textMateRules": [
 				{
 					"scope": "ref.matchtext",
 					"settings": {
-						"foreground": "#fff"
-					}
-				}
-			]
+						"foreground": "#fff",
+					},
+				},
+			],
 		},
-		"textMateRules": []
+		"textMateRules": [],
 	},
 
 	"extensions.autoUpdate": false,
@@ -303,14 +303,14 @@
 	"workbench.activityBar.location": "bottom",
 	"editor.stickyScroll.enabled": false,
 	"workbench.editorAssociations": {
-		"*.sql": "sql-query-book"
+		"*.sql": "sql-query-book",
 	},
 	"workbench.sideBar.location": "right",
 	"editor.minimap.enabled": false,
 	"workbench.editor.wrapTabs": true,
 	"rapidapi.terminalLink.enabled": false,
 	"[xml]": {
-		"editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
+		"editor.defaultFormatter": "mikeburgh.xml-format",
 	},
 	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list", "variants"],
 	"workbench.experimental.share.enabled": true,
@@ -325,7 +325,7 @@
 	"gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
 	"window.customTitleBarVisibility": "never",
 	"vscode_custom_css.imports": [
-		"file:///home/anhello/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+		"file:///home/anhello/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js",
 	],
 	"animations.Enabled": true,
 	"database-client.autoSync": true,
@@ -335,46 +335,47 @@
 	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 	"eslint.workingDirectories": [{ "mode": "auto" }],
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
+		"source.fixAll.eslint": "explicit",
 	},
-	"terminal.integrated.suggest.enabled": true,
 	"github.copilot.enable": {
 		"*": true,
 		"plaintext": false,
 		"markdown": false,
 		"scminput": false,
-		"sql": false
+		"sql": false,
 	},
 	"dbcode.connections": [
 		{
-			"connectionId": "82-ZDDrg_Jb6JAG5Y41BZ",
-			"name": "TST",
-			"driver": "redis",
-			"color": "#F00019",
+			"connectionId": "KEp0o3cAO7UGMA8G7yrdf",
+			"name": "DEV_POS",
+			"driver": "postgres",
+			"color": "#00B083",
 			"connectionType": "host",
 			"host": "localhost",
-			"port": 6379,
-			"ssl": false,
-			"username": "default",
-			"password": "",
-			"savePassword": "secretStorage",
-			"readOnly": false,
-			"connectionTimeout": 30
-		},
-		{
-			"connectionId": "014ECSJlZXlVaedTsyugf",
-			"name": "test",
-			"driver": "postgres",
-			"connectionType": "host",
-			"host": "127.0.0.1",
 			"port": 5434,
 			"ssl": false,
+			"authMethod": "password",
 			"username": "root",
 			"password": "",
 			"savePassword": "secretStorage",
+			"database": "api",
 			"readOnly": false,
-			"connectionTimeout": 30
-		}
+			"postConnectionSqlType": "inline",
+			"connectionTimeout": 30,
+			"pinnedConnectionTimeout": "0",
+			"introspection": {
+				"progressive": false,
+			},
+		},
 	],
-	"breadcrumbs.enabled": false
+	"workbench.secondarySideBar.defaultVisibility": "hidden",
+	"[handlebars]": {
+		"editor.defaultFormatter": "vscode.html-language-features",
+	},
+	"editor.largeFileOptimizations": false,
+	"dbcode.history.enabled": true,
+	"dbcode.resultLocation": "panel",
+	"dbcode.displayDensity": "compact",
+	"dbcode.rowBanding": true,
+	"breadcrumbs.enabled": false,
 }
